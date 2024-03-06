@@ -1,0 +1,18 @@
+<ul class="list-group" *ngFor="let fav of favoritos">
+    <li class="list-group-item">{{fav }}
+
+    </li>
+    <button     [routerLink]="['/author', fav]"
+    >
+    Obras</button>
+
+
+
+  </ul>
+
+  <h2>
+    Autores Favoritos
+  </h2>
+  <h3>
+    {{numberFavoritos}}
+  </h3>

@@ -1,0 +1,20 @@
+
+<ul class="list-group" *ngFor=" let a of titles">
+    <li class="list-group-item">{{ a.title  }}
+
+        <button     [routerLink]="['/author/title', a.title]"
+        >
+        Ver Màs</button>
+
+    </li>
+   
+  </ul>
+
+
+  <button
+  mat-button
+  color="warn"
+  (click)="goBack()"
+  >
+      Regresar
+  </button>

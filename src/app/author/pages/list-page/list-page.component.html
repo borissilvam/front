@@ -1,0 +1,45 @@
+
+<div class="">
+    <div  >
+        <ul class="list-group" *ngFor="let author of authors, let i = index ">
+
+            <li class="list-group-item ml-2 
+            d-flex justify-content-between">
+                <span class="p-3">{{i}}</span>
+                {{author}}
+        
+               
+
+                <div class="d-flex">
+                    <button     [routerLink]="['/author', author]"
+                    >
+                    Obras</button>
+
+
+                    <button *ngIf="!verificarFav(author) "
+                    (click)="saveFavorites(author)"
+                    type="button" class="btn btn-outline-danger">Agregar
+                        Favoritos
+                    </button>
+
+                    <button *ngIf="verificarFav(author)"  
+                    (click)="deleteFavorite(author)"
+                    class="btn btn-outline-danger"
+                    >
+                     Eliminar Favorito   
+                    </button>
+
+
+                </div>
+
+               
+        
+               
+        
+            </li>
+            
+           
+          </ul>
+        
+    </div>
+</div>
